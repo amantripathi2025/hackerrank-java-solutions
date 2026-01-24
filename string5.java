@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class string5 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String s = scanner.nextLine();
+        
+        // Method 1: Using two pointers
+        boolean isPalindrome = true;
+        int left = 0;
+        int right = s.length() - 1;
+        
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
+                isPalindrome = false;
+                break;
+            }
+            left++;
+            right--;
+        }
+        
+        System.out.println(isPalindrome ? "Yes" : "No");
+        
+        scanner.close();
+    }
+}
